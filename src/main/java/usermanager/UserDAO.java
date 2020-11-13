@@ -35,13 +35,12 @@ public class UserDAO {
     }
 
     public void insertUser(User user) throws SQLException {
-        String sql = "INSERT INTO book (title, author, price) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO users(name, email, country) VALUES (?, ?, ?);";
         connect();
         try (PreparedStatement statement = jdbcConnection.prepareStatement(sql)) {
             statement.setString(1, user.getName());
             statement.setString(2, user.getEmail());
             statement.setString(3, user.getCountry());
-            System.out.println(statement);
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

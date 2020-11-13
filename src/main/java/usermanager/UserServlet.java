@@ -18,8 +18,7 @@ public class UserServlet extends HttpServlet{
     private UserDAO userDAO;
 
     public void init() {
-        String jdbcURL = "jdbc:sqlserver://localhost;instance=SQLEXPRESS;" +
-                "databaseName=high_performance_java_persistence";
+        String jdbcURL = "jdbc:sqlserver://localhost;instance=SQLEXPRESS;databaseName=demo";
         String jdbcUsername = "guest";
         String jdbcPassword = "12345";
         userDAO = new UserDAO(jdbcURL, jdbcUsername,jdbcPassword);
