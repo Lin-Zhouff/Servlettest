@@ -72,16 +72,12 @@ public class UserDAO {
 
     public List < User > selectAllUsers() throws SQLException {
 
-        // using try-with-resources to avoid closing resources (boiler plate code)
         List< User > users = new ArrayList< >();
         connect();
         String sql = "select * from users";
-        // Step 1: Establishing a Connection
         try (PreparedStatement preparedStatement = jdbcConnection.prepareStatement(sql)) {
-            // Step 3: Execute the query or update query
             ResultSet rs = preparedStatement.executeQuery();
 
-            // Step 4: Process the ResultSet object.
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
