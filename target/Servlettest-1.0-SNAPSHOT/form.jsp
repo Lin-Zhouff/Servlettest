@@ -17,16 +17,16 @@
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: tomato">
+    <nav>
         <div>
             <h1> User Management App </h1>
         </div>
     </nav>
 </header>
 <br>
-<div class="container col-md-5">
-    <div class="card">
-        <div class="card-body">
+<div>
+    <div>
+        <div>
             <c:if test="${user != null}">
             <form action="update" method="post">
                 </c:if>

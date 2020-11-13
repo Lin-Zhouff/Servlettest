@@ -17,7 +17,7 @@
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: tomato">
+    <nav>
         <div>
             <h1>User Management</h1>
         </div>
@@ -25,19 +25,18 @@
 </header>
 <br>
 
-<div class="row">
-    <!-- <div class="alert alert-success" *ngIf='message'>{{message}}</div> -->
+<div>
 
-    <div class="container">
+    <div>
         <h3 class="text-center">List of Users</h3>
         <hr>
-        <div class="container text-left">
+        <div>
 
             <a href="<%=request.getContextPath()%>/new" class="btn btn-success">Add
                 New User</a>
         </div>
         <br>
-        <table class="table table-bordered">
+        <table>
             <thead>
             <tr>
                 <th>ID</th>
@@ -48,7 +47,6 @@
             </tr>
             </thead>
             <tbody>
-            <!--   for (Todo todo: todos) {  -->
             <c:forEach var="user" items="${listUser}">
 
                 <tr>
@@ -70,7 +68,6 @@
                     </td>
                 </tr>
             </c:forEach>
-            <!-- } -->
             </tbody>
 
         </table>
